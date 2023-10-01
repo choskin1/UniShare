@@ -30,15 +30,26 @@
         }
 
         .members-list {
-            list-style-type: none;
+            list-style-type: none; /* Remove default bullets */
             padding: 0;
             margin: 10px 0;
-            text-align: center; /* Change from left to center */
+            text-align: center; 
         }
-
+        
         .members-list-item {
             padding: 5px;
+            position: relative; /* Set the position context for the pseudo-element */
+            display: inline-block; /* Convert list items to inline-block */
         }
+        
+        .members-list-item::before {
+            content: "•"; /* Bullet symbol */
+            position: absolute; 
+            left: 0; 
+            transform: translateX(-100%); /* Move the bullet to the left of the list item */
+            padding-right: 10px; /* Space between bullet and text */
+        }
+
 
         .start-meeting-btn {
             background-color: #0055A2; /* Otago Blue */
