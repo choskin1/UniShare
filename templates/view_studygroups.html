@@ -107,7 +107,7 @@
     <script>
         function displayFileName(input) {
             const filenameDisplay = input.parentNode.nextElementSibling;
-            filenameDisplay.innerText = input.files[0].name;
+            // filenameDisplay.innerText = input.files[0].name;
         }
     </script>
 </head>
@@ -135,6 +135,7 @@
                     <form action="/upload_to_s3" method="post" enctype="multipart/form-data">
             <input type="hidden" name="group_id" value="{{ group.id }}">
             <div class="file-input-wrapper">
+                <button type="button" class="file-input-button">Choose File</button>
                 <input class="file-input-button" type="file" name="file" onchange="displayFileName(this)">
             </div>
             <div class="filename-display"></div>
