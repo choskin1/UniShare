@@ -69,44 +69,44 @@
             background-color: #003366; /* Darker Blue */
         }
 
-        /* Modified styles for file input */
+        /* New Styles for File Input */
         .file-input-wrapper {
-            position: relative;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+
+        .file-input-wrapper {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; /* Center align items horizontally */
             margin-top: 10px;
         }
 
         .file-input-button {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: pointer;
-            z-index: 2;
-        }
-
-        .button-label {
             padding: 10px 20px;
             background-color: #0055A2; /* Otago Blue */
             color: #ffffff;
             border: none;
+            cursor: pointer;
             border-radius: 3px;
             text-align: center;
         }
 
-        .filename-display {
-            display: block;
-            margin-top: 10px;
-            text-align: center; /* Added to center align the filename */
-            font-style: italic;
+        .file-input-button:hover {
+            background-color: #003366; /* Darker Blue */
         }
 
+        .filename-display {
+            margin-top: 10px;
+            font-style: italic;
+        }
     </style>
     <script>
         function displayFileName(input) {
-            const filenameDisplay = input.nextElementSibling.nextElementSibling;
+            const filenameDisplay = input.parentNode.nextElementSibling;
             filenameDisplay.innerText = input.files[0].name;
         }
     </script>
@@ -133,14 +133,14 @@
                     </div>
                     <!-- Upload Form -->
                     <form action="/upload_to_s3" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="group_id" value="{{ group.id }}">
-                        <div class="file-input-wrapper">
-                            <span class="button-label">Choose File</span>
-                            <input type="file" class="file-input-button" name="file" onchange="displayFileName(this)">
-                            <span class="filename-display"></span>
-                        </div>
-                        <input type="submit" value="Upload Document" name="submit" class="blue-button">
-                    </form>
+            <input type="hidden" name="group_id" value="{{ group.id }}">
+            <div class="file-input-wrapper">
+                <button type="button" class="file-input-button">Choose File</button>
+                <input type="file" name="file" onchange="displayFileName(this)">
+            </div>
+            <div class="filename-display"></div>
+            <input type="submit" value="Upload Document" name="submit" class="blue-button">
+        </form>
 
                     <!-- View Files link -->
                     <a class="blue-button" href="/view_files">View Files</a>
