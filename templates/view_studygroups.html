@@ -135,8 +135,7 @@
                     <form action="/upload_to_s3" method="post" enctype="multipart/form-data">
             <input type="hidden" name="group_id" value="{{ group.id }}">
             <div class="file-input-wrapper">
-                <button type="button" class="file-input-button">Choose File</button>
-                <input type="file" name="file" onchange="displayFileName(this)">
+                <input class="file-input-button" type="file" name="file" onchange="displayFileName(this)">
             </div>
             <div class="filename-display"></div>
             <input type="submit" value="Upload Document" name="submit" class="blue-button">
