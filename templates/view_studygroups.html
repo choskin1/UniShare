@@ -78,13 +78,11 @@
             border-radius: 3px;
         }
 
-        .file-input-wrapper input[type="file"] {
-            position: absolute;
-            top: 0;
-            right: 0;
-            opacity: 0;
-            cursor: pointer;
-            font-size: 100px;
+        .file-input-wrapper {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; /* Center align items horizontally */
+            margin-top: 10px;
         }
 
         .file-input-button {
@@ -106,6 +104,12 @@
             font-style: italic;
         }
     </style>
+    <script>
+        function displayFileName(input) {
+            const filenameDisplay = input.parentNode.nextElementSibling;
+            filenameDisplay.innerText = input.files[0].name;
+        }
+    </script>
 </head>
 
 <body>
@@ -129,14 +133,14 @@
                     </div>
                     <!-- Upload Form -->
                     <form action="/upload_to_s3" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="group_id" value="{{ group.id }}">
-                        <div class="file-input-wrapper">
-                            <button type="button" class="file-input-button">Choose File</button>
-                            <input type="file" name="file" onchange="this.nextElementSibling.innerText = this.files[0].name">
-                        </div>
-                        <div class="filename-display"></div>
-                        <input type="submit" value="Upload Document" name="submit" class="blue-button">
-                    </form>
+            <input type="hidden" name="group_id" value="{{ group.id }}">
+            <div class="file-input-wrapper">
+                <button type="button" class="file-input-button">Choose File</button>
+                <input type="file" name="file" onchange="displayFileName(this)">
+            </div>
+            <div class="filename-display"></div>
+            <input type="submit" value="Upload Document" name="submit" class="blue-button">
+        </form>
 
                     <!-- View Files link -->
                     <a class="blue-button" href="/view_files">View Files</a>
