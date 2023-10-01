@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0f06667e-9368-4796-b96e-1de8ad7d840a" name="Changes" comment="ect files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="df5c4b21-d8cb-4bce-a1a4-9b5dd714d59b" />
+        <option name="url" value="https://github.com/choskin1/Assingment_1.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2UMhnrGefVBNbFX6IBQcGKz11Vw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/connorhoskin/Desktop/Group-Study-App",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="COSC349 Assingment 1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f06667e-9368-4796-b96e-1de8ad7d840a" name="Changes" comment="" />
+      <created>1692755529144</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692755529144</updated>
+      <workItem from="1692755530352" duration="12339000" />
+      <workItem from="1693427648772" duration="2174000" />
+      <workItem from="1693435799474" duration="67000" />
+      <workItem from="1693435942476" duration="3925000" />
+      <workItem from="1693538200650" duration="36320000" />
+      <workItem from="1696042296654" duration="1157000" />
+    </task>
+    <task id="LOCAL-00001" summary="uopdating repo to be in inline with my local files">
+      <created>1693428242410</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693428242410</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed user name display in dashboard and added functionality for a user when creating a group they automatically become apart of it">
+      <created>1693428887112</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693428887112</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added the basic vagrant file and other unversioned files. Starting the deployment of vms using the applicaiton code i have previuosly developed">
+      <created>1693434885511</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693434885511</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Main changes to vargant file, setting up three vms on the network address 192.168.56.2,">
+      <created>1693442185487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693442185487</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added empty start up scripts for each vm so i can begin the provisioning process">
+      <created>1693442483471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693442483471</updated>
+    </task>
+    <task id="LOCAL-00006" summary="started the initial front end start up script">
+      <created>1693444349833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1693444349833</updated>
+    </task>
+    <task id="LOCAL-00007" summary="bug fixes in many places, moved from using apache and flash to just flask as i think it will suffice for this assingment and this project is not intended for production">
+      <created>1693774542975</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693774542976</updated>
+    </task>
+    <task id="LOCAL-00008" summary="debugging front end">
+      <created>1693776262306</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693776262306</updated>
+    </task>
+    <task id="LOCAL-00009" summary="figrured out the port forwarding problem">
+      <created>1693776933066</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1693776933066</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changed the data base configution to mysql">
+      <created>1693777393009</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1693777393009</updated>
+    </task>
+    <task id="LOCAL-00011" summary="minor changes to connect backend, setting up approiopate passwords for root user and appuser">
+      <created>1693779347955</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1693779347955</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixed a few problems related to data base initailisation from provisioning script, front and and backend working now,">
+      <created>1693785408968</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1693785408969</updated>
+    </task>
+    <task id="LOCAL-00013" summary="trying to get virtual meetings connected">
+      <created>1693800016395</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693800016395</updated>
+    </task>
+    <task id="LOCAL-00014" summary="going through some challenges, I could not get jitsi to work so now i have changed the function of the media vm to another database for storing files.">
+      <created>1693809226416</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693809226418</updated>
+    </task>
+    <task id="LOCAL-00015" summary="final chagnges, added abiltiy to join meetings and upload files, application side is not perfect but can be improved by another develpoper at a later date">
+      <created>1693816366302</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1693816366303</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ect files">
+      <created>1693816406137</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693816406137</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="uopdating repo to be in inline with my local files" />
+    <MESSAGE value="Fixed user name display in dashboard and added functionality for a user when creating a group they automatically become apart of it" />
+    <MESSAGE value="Added the basic vagrant file and other unversioned files. Starting the deployment of vms using the applicaiton code i have previuosly developed" />
+    <MESSAGE value="Main changes to vargant file, setting up three vms on the network address 192.168.56.2," />
+    <MESSAGE value="Added empty start up scripts for each vm so i can begin the provisioning process" />
+    <MESSAGE value="started the initial front end start up script" />
+    <MESSAGE value="bug fixes in many places, moved from using apache and flash to just flask as i think it will suffice for this assingment and this project is not intended for production" />
+    <MESSAGE value="debugging front end" />
+    <MESSAGE value="figrured out the port forwarding problem" />
+    <MESSAGE value="changed the data base configution to mysql" />
+    <MESSAGE value="minor changes to connect backend, setting up approiopate passwords for root user and appuser" />
+    <MESSAGE value="fixed a few problems related to data base initailisation from provisioning script, front and and backend working now," />
+    <MESSAGE value="trying to get virtual meetings connected" />
+    <MESSAGE value="going through some challenges, I could not get jitsi to work so now i have changed the function of the media vm to another database for storing files." />
+    <MESSAGE value="final chagnges, added abiltiy to join meetings and upload files, application side is not perfect but can be improved by another develpoper at a later date" />
+    <MESSAGE value="ect files" />
+    <option name="LAST_COMMIT_MESSAGE" value="ect files" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/COSC349_Assingment_1$test.coverage" NAME="test Coverage Results" MODIFIED="1692931672441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COSC349_Assingment_1$app1.coverage" NAME="app1 Coverage Results" MODIFIED="1692931700588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/COSC349_Assingment_1$app.coverage" NAME="app Coverage Results" MODIFIED="1693427946330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
