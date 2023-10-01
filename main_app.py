@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 import boto3
 app = Flask(__name__)
-
+# helllooo
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "login"
