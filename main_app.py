@@ -99,10 +99,16 @@ def upload_to_s3():
         flash('No selected file')
         return redirect(request.url)
     if file:
-        # Replace 'YOUR_BUCKET_NAME' with your S3 bucket's name
-        s3.upload_fileobj(file, 'study-group-media', file.filename)
+        group_id = request.form.get("group_id")
+        if not group_id:
+            flash('Study group missing')
+            return redirect(request.url)
+        # Create a unique file path for the study group
+        file_path = f"{group_id}/{file.filename}"
+        s3.upload_fileobj(file, 'study-group-media', file_path)
         flash('File successfully uploaded')
         return redirect(url_for('dashboard'))
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
