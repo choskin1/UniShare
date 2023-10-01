@@ -77,16 +77,15 @@ def get_user_groups(user_id):
     if user:
         return user.studygroups
     return []
-@app.route('/view_files', methods=['GET'])
+    
+@app.route('/view_files/<group_id>', methods=['GET'])
 @login_required
-def view_files():
+def view_files(group_id):
 
-    files = [
-        {"filename": "document1.pdf", "filepath": "/path/to/document1.pdf"},
-        {"filename": "presentation.ppt", "filepath": "/path/to/presentation.ppt"},
-        {"filename": "notes.txt", "filepath": "/path/to/notes.txt"},
-    ]
+    files = File.query.filter_by(group_id=group_id).all()
+
     return render_template('view_files.html', files=files)
+
 
 @app.route('/upload_to_s3', methods=['POST'])
 @login_required
