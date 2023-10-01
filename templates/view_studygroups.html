@@ -23,6 +23,12 @@
             margin-bottom: 10px;
         }
 
+        .study-group form, 
+        .study-group div {  /* Targeting forms and divs inside the .study-group */
+            width: 100%;
+            text-align: center; /* To ensure inline elements and text inside are centered */
+        }
+
         .members-list {
             list-style-type: none;
             padding: 0;
@@ -133,13 +139,13 @@
                     </div>
                     <!-- Upload Form -->
                     <form action="/upload_to_s3" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="group_id" value="{{ group.id }}">
-            <div class="file-input-wrapper">
-                <input class="file-input-button" type="file" name="file" onchange="displayFileName(this)">
-            </div>
-            <div class="filename-display"></div>
-            <input type="submit" value="Upload Document" name="submit" class="blue-button">
-        </form>
+                        <input type="hidden" name="group_id" value="{{ group.id }}">
+                        <div class="file-input-wrapper">
+                            <input class="file-input-button" type="file" name="file" onchange="displayFileName(this)">
+                        </div>
+                        <div class="filename-display"></div>
+                        <input type="submit" value="Upload Document" name="submit" class="blue-button">
+                    </form>
 
                     <!-- View Files link -->
                     <a class="blue-button" href="/view_files/{{ group.id }}">View Files</a>
