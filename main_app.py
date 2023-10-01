@@ -78,13 +78,22 @@ def get_user_groups(user_id):
         return user.studygroups
     return []
     
-@app.route('/view_files/<group_id>', methods=['GET'])
+@app.route('/view_files/<group_id>', methods=['GET'])  # Add group_id to the route
 @login_required
 def view_files(group_id):
+    # List files in S3 under the specific group prefix
+    response = s3.list_objects_v2(Bucket='study-group-media', Prefix=f"{group_id}/")
 
-    files = File.query.filter_by(group_id=group_id).all()
+    files = []
+    if 'Contents' in response:
+        for obj in response['Contents']:
+            files.append({
+                "filename": obj['Key'].split('/')[-1],  # The actual file name after the last '/'
+                "filepath": f"https://study-group-media.s3.amazonaws.com/{obj['Key']}"  # Direct link to the file
+            })
 
     return render_template('view_files.html', files=files)
+
 
 
 @app.route('/upload_to_s3', methods=['POST'])
