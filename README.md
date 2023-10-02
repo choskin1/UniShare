@@ -21,7 +21,7 @@
 3. [Usage](#usage)
 4. [Application Design & Architecture](#application-design--architecture)
 5. [Testing](#testing)
-6. [Suggested Improvements](#suggested_improvements)
+6. [Suggested Improvements](#suggested-improvements)
 
 
 ## Prerequisites
