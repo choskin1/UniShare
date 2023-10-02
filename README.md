@@ -85,7 +85,9 @@ Before you begin, ensure you have met the following requirements:
    ```sql
    SHOW TABLES;
    EXIT;
-   
+
+### 3. Setting up the S3 Bucket
+TODOOOO 
 ## Usage
 
 - How to use the application once it's up and running.
