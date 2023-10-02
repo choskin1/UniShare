@@ -1,4 +1,4 @@
-<h1 align="center" style="color: #2E8B57;">📚 UniShare: Connect, Collaborate, Conquer Your Studies! 📚</h1>
+<h1 align="center" style="color: #2E8B57;">📚 UniShare: Connect, Collaborate, Conquer Your Studies 📚</h1>
 
 <p align="center">
   Welcome to <b style="color: #4682B4;">UniShare</b>, the ultimate platform designed for students who believe in the power of collaborative learning. Whether you're looking to join a study group, share essential files, or dive into a video conference to discuss that challenging topic, UniShare has got you covered.
