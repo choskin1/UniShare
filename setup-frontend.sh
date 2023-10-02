@@ -10,7 +10,7 @@ pip3 install pymysql
 # Install Flask and other necessary Python packages
 pip3 install Flask flask_sqlalchemy flask_migrate flask_login
 
-sudo python3 main_app.py
+python3 main_app.py
 
 
 
