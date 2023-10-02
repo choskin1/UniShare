@@ -15,6 +15,60 @@
 </p>
 
 
+## Table of Contents
+1. [Prerequisites](#prerequisites)
+2. [Installation & Setup](#installation--setup)
+3. [Usage](#usage)
+4. [Application Design & Architecture](#application-design--architecture)
+5. [Cloud Deployment](#cloud-deployment)
+6. [Testing](#testing)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Acknowledgments](#acknowledgments)
+
+## Prerequisites
+
+- List of software, tools, or cloud services required to run the application.
+
+## Installation & Setup
+
+- Step-by-step guide on setting up the application.
+  - Cloning the repository.
+  - Setting up the database.
+  - Setting up the frontend.
+  - Running the main application.
+
+## Usage
+
+- How to use the application once it's up and running.
+
+## Application Design & Architecture
+
+- Describe the design of your application.
+- Explain how different components interact, especially if there are any virtual machines or cloud services involved.
+
+## Cloud Deployment
+
+- Detailed steps or scripts used for deploying the application to the cloud.
+- Mention any manual steps required.
+
+## Testing
+
+- Describe how the application was tested.
+- Mention any tools or frameworks used.
+
+## Contributing
+
+- Guidelines for anyone who wants to contribute to the project.
+
+## License
+
+- Mention the license of the project, if any.
+
+## Acknowledgments
+
+- Credit any third-party libraries, tools, or open-source projects used.
+- Mention any inspirations or references.
 
 
 
