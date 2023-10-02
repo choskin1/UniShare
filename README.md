@@ -43,22 +43,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation & Setup
 
-### 1. Setting up the EC2 for Web Server
-
-1. **Launch an EC2 instance** on AWS and ensure it's running.
-2. **SSH into the EC2 instance** using your preferred terminal or SSH client:
-   ```bash
-   ssh -i "your-key-pair.pem" ec2-user@your-ec2-instance-ip
-3. **Clone the UniShare repository**:
-   ```bash
-   git clone https://github.com/choskin1/UniShare.git
-4. **Navigate to the cloned repository** and run the frontend startup script:
-   ```bash
-   cd UniShare
-   ./setup-frontend.sh
-5. This will start the main Python application and create a server operating on port `5001`.
-
-### 2. Setting up the RDS for Database
+### 1. Setting up the RDS for Database
 
 1. **Launch an RDS instance** on AWS:
    - Navigate to the RDS service in the AWS Management Console.
@@ -85,12 +70,70 @@ Before you begin, ensure you have met the following requirements:
    ```sql
    SHOW TABLES;
    EXIT;
+### 2. Setting Up an Amazon S3 Bucket
 
-### 3. Setting up the S3 Bucket
-TODOOOO 
+1. **Sign in to AWS**:
+   - Go to [AWS Console](https://aws.amazon.com/) and sign in.
+2. **Access S3**:
+   - Select "S3" from Services or search for it.
+3. **Create Bucket**:
+   - Click "Create bucket".
+   - Name it (names are globally unique) and choose a region.
+4. **Configure Settings**:
+   - Adjust "Properties" and "Permissions" as needed.
+   - UniShare currently alows anyone to upload files with an open policy
+
+### 3. Setting up the EC2 for Web Server
+
+1. **Launch an EC2 instance** on AWS and ensure it's running.
+2. **SSH into the EC2 instance** using your preferred terminal or SSH client:
+   ```bash
+   ssh -i "your-key-pair.pem" ec2-user@your-ec2-instance-ip
+3. **Clone the UniShare repository**:
+   ```bash
+   sudo yum install git
+   git clone https://github.com/choskin1/UniShare.git
+4. **Setup the connection to the database** by changing line 13 in main, the result should look like this
+    ```bash
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://<username>:<passoword>@<database endpoint>/myappdb'
+5. **Setup the connection to the s3 bucket** by ensuring that the name of the bucket is approipately referenced in upload_to_s3() and in view_files()
+5. **Navigate to the cloned repository** and run the frontend startup script:
+   ```bash
+   cd UniShare
+   ./setup-frontend.sh
+6. This will start the main Python application and create a server operating on port `5001`.
+
 ## Usage
 
-- How to use the application once it's up and running.
+### 🌐 Accessing UniShare:
+
+1. **Open a Web Browser**: Navigate to the public IP address of the Web Server EC2, dont forget to specify port 5001
+2. **Sign In**: If you're a new user, follow the registration process otherwise sign in using your existing credentials
+
+### 📖 Study Groups:
+
+1. **Browse Existing Groups**: Check out study groups that match your interests or subjects.
+2. **Join a Group**: Click on a group and hit the 'Join' button. Some groups may require approval from the group admin.
+3. **Create a Group**: Can't find a group that matches your needs? Create one! Click on 'Create Group', fill in the details, and invite members.
+
+### 📁 Sharing Files:
+
+1. **Access the File Section**: Within a study group, navigate to the 'Files' tab.
+2. **Upload a File**: Click on 'Upload', select your file. The file will be stored securely in the S3 bucket.
+3. **Download Files**: Browse through shared files and click 'Download' next to the file you wish to access.
+
+### 📹 Video Conferencing:
+
+1. **Schedule a Session**: Within a study group, navigate to the 'Video Sessions' tab and schedule a new session.
+2. **Join a Session**: Click on the scheduled session link at the specified time to join the video conference.
+
+### 🔒 Privacy & Security:
+
+- All your interactions, including file uploads and video sessions, are encrypted and secure.
+- Ensure you log out after each session, especially when accessing from public devices.
+
+Remember, UniShare is all about collaboration. Engage, share, and make the most of this platform!
+
 
 ## Application Design & Architecture
 
