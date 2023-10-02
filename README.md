@@ -43,12 +43,49 @@ Before you begin, ensure you have met the following requirements:
 
 ## Installation & Setup
 
-- Step-by-step guide on setting up the application.
-  - Cloning the repository.
-  - Setting up the database.
-  - Setting up the frontend.
-  - Running the main application.
+### 1. Setting up the EC2 for Web Server
 
+1. **Launch an EC2 instance** on AWS and ensure it's running.
+2. **SSH into the EC2 instance** using your preferred terminal or SSH client:
+   ```bash
+   ssh -i "your-key-pair.pem" ec2-user@your-ec2-instance-ip
+3. **Clone the UniShare repository**:
+   ```bash
+   git clone https://github.com/choskin1/UniShare.git
+4. **Navigate to the cloned repository** and run the frontend startup script:
+   ```bash
+   cd UniShare
+   ./setup-frontend.sh
+5. This will start the main Python application and create a server operating on port `5001`.
+
+### 2. Setting up the RDS for Database
+
+1. **Launch an RDS instance** on AWS:
+   - Navigate to the RDS service in the AWS Management Console.
+   - Choose the database engine (e.g., MySQL).
+   - Configure the instance specifications, security groups, and other settings as needed.
+   - Launch the RDS instance and note down the endpoint.
+2. **SSH into your EC2 instance** (if not already connected):
+   ```bash
+   ssh -i "your-key-pair.pem" ec2-user@your-ec2-instance-ip
+3. **Install the MySQL client on the EC2 instance**:
+   ```bash
+   sudo yum install mysql
+4. **Connect to the RDS database from the EC2 instance**:
+   ```bash
+   mysql -h your-rds-endpoint -u your-username -p
+5. **Create a database named `myappdb`**:
+   ```sql
+   CREATE DATABASE myappdb;
+   USE myappdb;
+6. **Run the database setup script to configure the tables and other database structures**:
+   ```sql
+   SOURCE setup-database.sql;
+7. **Verify the database setup by checking the tables**:
+   ```sql
+   SHOW TABLES;
+   EXIT;
+   
 ## Usage
 
 - How to use the application once it's up and running.
