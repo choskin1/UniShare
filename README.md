@@ -4,7 +4,8 @@
   Welcome to <b style="color: #4682B4;">UniShare</b>, the ultimate platform designed for students who believe in the power of collaborative learning. Whether you're looking to join a study group, share essential files, or dive into a video conference to discuss that challenging topic, UniShare has got you covered. 🌍
 </p>
 
-## 🌟 Features:
+<h2 align="center">🌟 Features:</h2>
+
 - 📖 **Join or Create Study Groups:** Find like-minded peers to tackle subjects together.
 - 📁 **File Sharing:** Easily share notes, assignments, and resources with group members.
 - 📹 **Video Conferencing:** Dive into real-time discussions and study sessions.
@@ -14,15 +15,16 @@
   With UniShare, you're not just studying; you're building a community of learners. Dive in and discover the future of collaborative education! 🚀
 </p>
 
-## 📌 Table of Contents
+<h2 align="center">📌 Table of Contents</h2>
+
 1. [Prerequisites](#-prerequisites) 🛠
 2. [Installation & Setup](#-installation--setup) 🖥
-3. [Usage](#usage) 📖
-4. [Application Design & Architecture](#application-design--architecture) 🏗
-5. [Testing](#testing) 🧪
+3. [Usage](#usage-) 📖
+4. [Application Design & Architecture](#-application-design--architecture-) 🏗
+5. [Testing](#-testing-) 🧪
 6. [Suggested Improvements](#-suggested-improvements) 💡
 
-## 🛠 Prerequisites
+<h2 align="center">🛠 Prerequisites</h2>
 
 Before you begin, ensure you have met the following requirements:
 
@@ -32,7 +34,7 @@ Before you begin, ensure you have met the following requirements:
 - ☁ **Basic Knowledge of Cloud Services:** Familiarity with AWS services like EC2, S3, and RDS is beneficial.
 - 🌍 **Internet Connection:** To access cloud services and deploy the application.
 
-## 🖥 Installation & Setup
+<h2 align="center">🖥 Installation & Setup</h2>
 
 ### 1. Setting up the RDS for Database 🗃
 
@@ -61,6 +63,7 @@ Before you begin, ensure you have met the following requirements:
    ```sql
    SHOW TABLES;
    EXIT;
+---   
 ### 2. Setting Up an Amazon S3 Bucket
 
 1. **Sign in to AWS**:
@@ -73,7 +76,7 @@ Before you begin, ensure you have met the following requirements:
 4. **Configure Settings**:
    - Adjust "Properties" and "Permissions" as needed.
    - UniShare currently alows anyone to upload files with an open policy
-
+---
 ### 3. Setting up the EC2 for Web Server
 
 1. **Launch an EC2 instance** on AWS and ensure it's running.
@@ -93,8 +96,8 @@ Before you begin, ensure you have met the following requirements:
    cd UniShare
    ./setup-frontend.sh
 6. This will start the main Python application and create a server operating on port `5001`.
-
-## Usage
+---
+<h2 align="center">Usage 📖</h2>
 
 ### 🌐 Accessing UniShare:
 
@@ -123,60 +126,61 @@ Before you begin, ensure you have met the following requirements:
 - All your interactions, including file uploads and video sessions, are encrypted and secure.
 - Ensure you log out after each session, especially when accessing from public devices.
 
-Remember, UniShare is all about collaboration. Engage, share, and make the most of this platform!
+---
 
+<h2 align="center">🏛 Application Design & Architecture 🏛</h2>
 
-## Application Design & Architecture
+### 🧱 Architecture Components:
 
+🖥 **Web Server (EC2)**:
+- 🚀 Hosts the main application and serves user requests.
+- 🗂 Interacts with the RDS database for data retrieval and storage.
+- 📦 Communicates with the S3 bucket for file storage and retrieval.
 
+🗄 **Database (RDS)**:
+- 💾 Stores user data, study group details, and other essential information.
+- ✅ Ensures data consistency and integrity.
 
-### Architecture Components:
+📂 **File Storage (S3)**:
+- 🔒 Securely stores and serves user-uploaded files like notes and assignments.
+- 🔄 Provides high availability and redundancy for stored files.
 
-1. **Web Server (EC2)**:
-   - Hosts the main application and serves user requests.
-   - Interacts with the RDS database for data retrieval and storage.
-   - Communicates with the S3 bucket for file storage and retrieval.
+--- 
+### 🔄 Data Flow:
 
-2. **Database (RDS)**:
-   - Stores user data, study group details, and other essential information.
-   - Ensures data consistency and integrity.
+🖱 **User Interaction**:
+- 🌐 Users access UniShare via a web browser.
+- 📤 User actions (like creating a study group or uploading a file) send requests to the EC2 web server.
 
-3. **File Storage (S3)**:
-   - Securely stores and serves user-uploaded files like notes and assignments.
-   - Provides high availability and redundancy for stored files.
+⚙ **Server Processing**:
+- 🖥 The EC2 instance processes user requests.
+- 🗂 For data-related operations, it communicates with the RDS database.
+- 📦 For file operations, it interacts with the S3 bucket.
 
-### Data Flow:
+📬 **Response Generation**:
+- 📝 Once the server processes the request, it generates an appropriate response.
+- 🖥 This response is then sent back to the user's browser for rendering.
 
-1. **User Interaction**:
-   - Users access UniShare via a web browser.
-   - User actions (like creating a study group or uploading a file) send requests to the EC2 web server.
+### 🔐 Security:
 
-2. **Server Processing**:
-   - The EC2 instance processes user requests.
-   - For data-related operations, it communicates with the RDS database.
-   - For file operations, it interacts with the S3 bucket.
+- 🚫 **Access Control**: UniShare implements strict access controls to ensure that only authorized users can access specific resources.
 
-3. **Response Generation**:
-   - Once the server processes the request, it generates an appropriate response.
-   - This response is then sent back to the user's browser for rendering.
+---
 
-### Security:
-- **Access Control**: UniShare implements strict access controls to ensure that only authorized users can access specific resources.
+<h2 align="center">🧪 Testing 🧪</h2>
 
-This architecture ensures that UniShare remains scalable, allowing it to handle a growing number of users while maintaining high performance and security standards.
+### 🖥 Manual Testing:
 
-## Testing
-
-### Manual Testing:
-1. **User Interface (UI) Testing**:
+1. 🌐 **User Interface (UI) Testing**:
    - The application's interface was tested across different browsers and devices to ensure a consistent user experience.
 
-2. **Functional Testing**:
+2. 🛠 **Functional Testing**:
    - Manual tests were conducted to validate the application's features, such as file sharing and video conferencing.
-  
-### Feedback Loop:
-- User feedback was continuously collected and integrated into the testing process to address real-world issues and improve the overall user experience.
+---
+### 🔄 Feedback Loop:
+- 🗣 User feedback was continuously collected and integrated into the testing process to address real-world issues and improve the overall user experience.
 
+---
 ## 💡 Suggested Improvements
 
 1. 🔍 **Enhanced Search Functionality**:
