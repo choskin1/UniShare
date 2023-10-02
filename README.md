@@ -28,7 +28,18 @@
 
 ## Prerequisites
 
-- List of software, tools, or cloud services required to run the application.
+Before you begin, ensure you have met the following requirements:
+
+- **Amazon Web Services (AWS) Account:** The application is currently deployed using AWS services, including EC2, S3, and RDS. If you wish to modify or redeploy the application, you'll need an AWS account. Sign up [here](https://aws.amazon.com/).
+
+- **Amazon Academy Learner Lab Credentials:** Access to the current deployment is through Amazon Academy Learner Lab credentials. Ensure you have these credentials handy.
+
+- **Git:** To clone and manage the project repository.
+
+- **Basic Knowledge of Cloud Services:** Familiarity with AWS services such as EC2, S3, and RDS will be beneficial.
+
+- **Internet Connection:** To access cloud services and deploy the application.
+
 
 ## Installation & Setup
 
