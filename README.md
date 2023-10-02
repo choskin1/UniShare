@@ -1,4 +1,4 @@
-# Study Group Repository README
+# UniShare
 Welcome to the Study Group repository. This guide aims to provide a comprehensive overview of the codebase to help new developers get up to speed quickly.
 
 ## Overview
