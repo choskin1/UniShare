@@ -229,12 +229,7 @@ def session(group_id):
     return render_template('session.html', group_id=group_id)
 
 
-@app.route('/view_users')
-@login_required
-def view_users():
-    users = User.query.all()
-    user_info = [f"ID: {user.id}, Username: {user.username}, Email: {user.email}" for user in users]
-    return '<br>'.join(user_info)
+
 
 
 @app.route('/logout', methods=['GET', 'POST'])
@@ -244,12 +239,7 @@ def logout():
     return redirect(url_for('login'))
 
 
-@app.route('/clear_users', methods=['GET'])
-@login_required
-def clear_users():
-    db.session.query(User).delete()
-    db.session.commit()
-    return "All users deleted"
+
 
 
 if __name__ == '__main__':
