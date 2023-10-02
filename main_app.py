@@ -82,14 +82,14 @@ def get_user_groups(user_id):
 @login_required
 def view_files(group_id):
     # List files in S3 under the specific group prefix
-    response = s3.list_objects_v2(Bucket='study-group-media', Prefix=f"{group_id}/")
+    response = s3.list_objects_v2(Bucket='unishare-media', Prefix=f"{group_id}/")
 
     files = []
     if 'Contents' in response:
         for obj in response['Contents']:
             files.append({
                 "filename": obj['Key'].split('/')[-1],  # The actual file name after the last '/'
-                "filepath": f"https://study-group-media.s3.amazonaws.com/{obj['Key']}"  # Direct link to the file
+                "filepath": f"https://unishare-media.s3.amazonaws.com/{obj['Key']}"  # Direct link to the file
             })
 
     return render_template('view_files.html', files=files)
@@ -113,7 +113,7 @@ def upload_to_s3():
             return redirect(request.url)
         # Create a unique file path for the study group
         file_path = f"{group_id}/{file.filename}"
-        s3.upload_fileobj(file, 'study-group-media', file_path)
+        s3.upload_fileobj(file, 'unishare-media', file_path)
         flash('File successfully uploaded')
         return redirect(url_for('dashboard'))
 
